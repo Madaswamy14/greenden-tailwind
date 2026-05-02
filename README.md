@@ -1,23 +1,24 @@
-# GreenDen Tailwind CSS
+# Greenden
 
-A modern, responsive website template for a nursery or plant shop, built with Tailwind CSS.
+A modern, responsive e-commerce website template for an online plant store, built purely with HTML and Tailwind CSS.
 
 ## Features
 
-- ✅ Fully responsive design
-- ✅ Dark mode support
-- ✅ Modern UI with glassmorphism effects
-- ✅ Built with Tailwind CSS v4
-- ✅ Simple navigation and product cards
+- ✅ **Fully Responsive Design**: Optimized for desktop, tablet, and mobile screens with a custom bottom navigation dock for mobile devices.
+- ✅ **JavaScript-Free UI**: Interactive components such as dropdown menus, filter selections, and form toggle switches function entirely without JavaScript, utilizing pure CSS (`:checked` state tricks).
+- ✅ **Tailwind CSS**: Styled using Tailwind CSS v2.2.19 via CDN, ensuring rapid and consistent UI development.
+- ✅ **No Build Step Required**: This is a pure static site. There is no need to install Node modules or run a build pipeline.
+- ✅ **Modern Aesthetics**: Clean, vibrant, green-themed design specifically tailored for an online plant, seed, and gardening store.
+
+## Included Pages
+
+- `index.html` - The home landing page featuring a hero banner, best sellers grid, about section, and newsletter signup.
+- `product.html` - The product catalog page, equipped with functional CSS-only category filters and sorting dropdowns.
+- `contact.html` - The contact page featuring a responsive layout, interactive form, and custom CSS toggle switches.
 
 ## Getting Started
 
-### Prerequisites
-
-- [Node.js](https://nodejs.org/) (v16 or higher recommended)
-- [npm](https://www.npmjs.com/) (usually comes with Node.js)
-
-### Installation
+Since this project is completely static and uses a CDN for Tailwind CSS, there are no dependencies to install.
 
 1. **Clone the repository:**
    ```bash
@@ -25,64 +26,26 @@ A modern, responsive website template for a nursery or plant shop, built with Ta
    cd greenden-tailwind
    ```
 
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
+2. **Run the project:**
+   Simply open `index.html` directly in your favorite web browser, or use a local development server like the "Live Server" extension in VS Code.
 
-### Development
+## Project Structure
 
-1. **Start the development server:**
-   ```bash
-   npm run dev
-   ```
-   This will start a local development server, usually at `http://localhost:3000`.
-
-2. **Build for production:**
-   ```bash
-   npm run build
-   ```
-   This will create an optimized production build in the `dist/` folder.
-
-### Project Structure
-
-```
+```text
 greenden-tailwind/
-├── index.html           # Main entry point
-├── input.css          # Tailwind CSS configuration
-├── src/
-│   ├── js/              # JavaScript files
-│   │   ├── main.js      # Main script (dark mode toggle)
-│   └── css/             # Additional CSS (empty, used for overrides)
-├── dist/                # Production build output
-├── package.json         # Project configuration
-└── tailwind.config.js   # Tailwind CSS configuration
+├── index.html           # Home page
+├── product.html         # Products listing page
+├── contact.html         # Contact Us page
+├── images/              # Local image assets
+└── README.md            # Project documentation
 ```
 
-## Customization
+## Technical Highlights
 
-### Tailwind CSS Configuration
-
-Edit `tailwind.config.js` to customize:
-- Colors
-- Fonts
-- Breakpoints
-- Plugin settings
-
-### Dark Mode
-
-Dark mode is enabled by default and can be toggled using the sun/moon icon in the navbar.
-
-To change dark mode behavior, edit `src/css/main.css` or `input.css`.
-
-## Contributing
-
-Contributions are welcome! Feel free to open an issue or submit a pull request.
+- **Pure CSS Dropdowns**: The filter and sort dropdowns on the product page use the hidden checkbox trick (`peer-checked`) to toggle visibility seamlessly without JavaScript.
+- **Mobile Dock**: A bottom navigation dock appears on mobile devices when scrolling down, offering quick, app-like access to primary navigation links.
+- **Custom Search Input**: Designed with a custom `-webkit-search-cancel-button` in CSS to align with the overarching aesthetic.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-**Built with Tailwind CSS v4**
+This project is open-source and free to use.
